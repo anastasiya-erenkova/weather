@@ -4,7 +4,7 @@
 }
 html{
 	background: #e1f0f6;
-	overflow: hidden;
+	overflow-x: hidden;
 }	
 body{
 	margin: 0;
@@ -12,6 +12,8 @@ body{
 }
 .weather{
 	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	width: 1000px;
 	text-align: center;
 	padding-bottom: 30px;
@@ -94,7 +96,7 @@ body{
 }
 .clouds {
 	position: absolute;
-	z-index: -1;
+	z-index: -100;
 	-webkit-animation-timing-function: linear;
 	        animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
@@ -159,13 +161,13 @@ body{
 	.weather {
 		width: 790px;
 	}
-	.clouds {
-		display: none;
-	}
 }
 @media screen and (max-width: 800px){
 	.weather {
 		width: 580px;
+	}
+	.clouds {
+		zoom: 0.8;
 	}
 }
 @media screen and (max-width: 600px){
@@ -174,6 +176,9 @@ body{
 	}
 	.weather__title {
 		font-size: 1.5em;
+	}
+	.clouds {
+		display: none;
 	}
 }
 @media screen and (max-width: 400px){
